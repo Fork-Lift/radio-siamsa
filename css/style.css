@@ -1,0 +1,580 @@
+@charset "utf-8";
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 25px;
+    width: 250px;
+    min-height: 100%;
+    overflow: hidden;
+    background: #005251;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 240px;
+    height: 35px;
+    margin: 90px 0;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+nav ul {
+    margin-top: 50px;
+    list-style: none;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+nav ul li {
+    margin-bottom: 60px;
+}
+
+nav ul li a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    color: #00a6a4;
+    font-weight: 600;
+}
+
+.download-menu::before {
+    content:"\f019";
+    display: inline-block;
+    text-align: center;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 18px;
+}
+
+.podcasts-menu::before {
+    content:"\f2ce";
+    display: inline-block;
+    text-align: center;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 18px;
+}
+
+.support-menu::before {
+    content:"\f4be";
+    display: inline-block;
+    text-align: center;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 18px;
+}
+
+.contact-menu::before {
+    content:"\f0e0";
+    display: inline-block;
+    text-align: center;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 18px;
+}
+
+/* main */
+main {
+    margin-left: 300px;
+    color: #333444;
+}
+/* main-home */
+#home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background: rgba(0, 82, 81, 0.1);
+}
+
+.radio-app {
+    box-sizing: border-box;
+    width: 980px;
+    padding: 30px 20px 0;
+}
+
+.radio-app iframe {
+    background-color: transparent;
+}
+
+/* main-about */
+#about {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: url(../images/about.jpg) no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+}
+
+.about-content {
+    margin: 90px 60px;
+    padding: 10px 40px;
+    background-color: #fff;
+    max-width: 850px;
+    opacity: 0.8;
+}
+
+.about-content h1 {
+    font-size: 48px;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.about-content a {
+    text-decoration: none;
+}
+
+/* main-download */
+.download {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: auto;
+    background: rgba(0, 82, 81, 0.1);
+}
+
+#android, 
+.apple, 
+.alexa {
+    width: 310px;
+    padding: 40px 5px;
+}
+
+#android img, 
+.apple img, 
+.alexa img {
+    display: block;
+    margin: 0 auto;
+}
+
+#android h1, 
+.apple h1, 
+.alexa h1 {
+    text-align: center;
+}
+
+#android ul, 
+.apple ol,
+.apple ul, 
+.alexa ol {
+    font-size: 18px;
+    line-height: 1.75;
+    display: table;
+    margin: 0 auto;
+}
+
+.googleplay-btn {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    background: black;
+    border: 1px solid black;
+    border-radius: 5%;
+    outline: none;
+    margin: 20px auto 0;
+    padding: 5px 10px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.googleplay-btn img {
+    display: inline-block;
+}
+
+.googleplay-btn p {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.googleplay-btn p:before {
+    content: "GET IT ON";
+    display: block;
+    clear: both;
+    font-size: 10px;
+}
+
+.apple {
+    word-break: break-all;
+}
+
+.apple ul {
+    list-style: none;
+}
+
+.apple ul li {
+    font-weight: 600;
+}
+
+.apple ul li:before {
+    content:"\f519";
+    display: inline-block;
+    text-align: center;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 18px;
+}
+
+/* main-podcasts */
+#podcasts {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background: url(../images/podcasts.jpg) no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.podcasts-content {
+    margin: 90px 100px;
+    padding: 0 50px 40px;
+    background-color: #fff;
+    width: 850px;
+    opacity: 0.8;
+}
+
+.podcasts-content h2 {
+    font-size: 18px;
+}
+
+.podcasts-content audio {
+    width: 100%;
+    margin: 10px 10px 10px 0;
+}
+
+.podcasts-btn {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    }
+  
+.active, .podcasts-btn:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.podcasts-btn:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+.active:after {
+    content: "\2796";
+}
+
+/* main-support */
+#support {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    background: rgba(0, 82, 81, 0.1);
+}
+
+.support-info {
+    width: 390px;
+    padding: 20px 20px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+#support-content {
+    width: 400px;
+    padding: 40px 0;
+}
+
+.support-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 300px;
+    font-size: 16px;
+}
+
+.support-form input {
+    margin: 5px 0 10px;
+}
+
+.support-form select {
+    height: 22px;
+    margin: 5px 0 10px;
+}
+
+/* main-contact */
+#contact {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    background: url(../images/contact.jpg) no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+}
+
+.contact-content {
+    margin: 90px 100px;
+    padding: 10px 50px;
+    background-color: #fff;
+    width: 850px;
+    opacity: 0.8;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input {
+    margin: 5px 0 10px;
+}
+
+textarea {
+    resize: none;
+    margin: 5px 0 10px;
+}
+
+input[type="submit"] {
+    width: 100px;
+    height: 50px;
+    margin: 15px auto;
+    font-weight: 900;
+}
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+    padding: 30px 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 12px;
+    color: gray;
+}
+
+.terms {
+    margin-bottom: 10px;
+}
+
+.terms a {
+    font-size: 18px;
+    color: gray;
+    text-decoration: none;
+}
+
+.terms a::before {
+    content: "";
+    display: inline-block;
+    clear: both;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    margin: 0 20px;
+    vertical-align: middle;
+    background: gray;
+}
+
+.terms a:first-child::before {
+    content: none;
+}
+
+.sns {
+    margin-bottom: 10px;
+}
+.sns a {
+    margin: 0 10px;
+    font-size: 30px;
+    color: gray;
+}
+
+/* TOP 버튼 */
+#circle {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #00A6A4;
+    border-radius: 50%;
+    background-color: #fff;
+    position: fixed;
+    right: 1.5%;
+    bottom: 4%;
+}
+
+#circle a {
+    position: absolute;
+    color: #00A6A4;
+    font-size: 40px;
+    left: 12px;
+}
+
+/* for mobile device */
+
+.mobile_tab {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 28px 20px 0 0;
+    width: 40px;
+    height: 40px;
+    background: url(../images/hamburger-menu-48.png) no-repeat;
+    background-position-x: center;
+}
+
+.mobile_tab.close {
+    background-position: -41px 0;
+}
+
+@media (max-width: 768px) {
+    /* media-header */
+    header {
+        position: relative;
+        padding: 0;
+        width: 100%;
+        min-height: 100px;
+    }
+
+    .logo {
+        width: 240px;
+        height: 35px;
+        margin: 40px 0 0 30px;
+    }
+
+    .logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .mobile_tab {
+        display: block;
+    }
+
+    nav ul {
+        margin-top: 35px;
+        height: 0;
+    }
+
+    nav ul li {
+        margin-bottom: 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 25px 0 25px 15px;
+        width: 100%;
+        text-align: left;
+        color: #fff;
+        border-top: 1px solid #d8d8d8;
+    }
+
+    nav ul.show {
+        height: 320px;
+    }
+
+    /* media-main */
+    main {
+        margin: 0;
+    }
+
+    .download {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #android, .apple, .alexa {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .alexa {
+        padding-bottom: 80px;
+    }
+
+    .podcasts-content {
+        margin: 90px 80px;
+        width: 100%;
+    }
+
+    #support {
+        flex-wrap: wrap;
+    }
+    .support-info {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    #support-content {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* media-footer */
+    footer {
+        margin: 0;
+    }
+
+    .terms a {
+        position: relative;
+        display: block;
+        line-height: 50px;
+    }
+
+    .terms a::before {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 46%;
+    }
+}
